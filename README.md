@@ -6,7 +6,7 @@ We think 4 hours should be enough to spend on this assignment. Please don't spen
 
 ## Requirement:
 - Use webpack to build es5 output of your program.
-- Make it look nice, we provided some internal sass files in the sass directory from our internal setup - you can read about these on `http://takeoff.schiphol.nl/component/style-fundamentals` (make sure webpack is also packaging these styles)
+- Make it look nice, we provided some internal sass files in the sass directory from our internal setup - you can read about these on [ http://takeoff.schiphol.nl/component/style-fundamentals ] (make sure webpack is also packaging these styles)
 - Your application should treat the contents of flights.json as the output of an API endpoint, it should load this via xhr and not require a page load when the user changes their input
 
 ## Submission:

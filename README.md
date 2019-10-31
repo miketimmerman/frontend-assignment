@@ -10,7 +10,7 @@ We think 4 hours should be enough to spend on this assignment. Please don't spen
 - Your application should treat the contents of flights.json as the output of an API endpoint, it should load this via xhr and not require a page load when the user changes their input
 
 ## Submission:
-- Create a fork of this repo. To submit your completed assignment please create a pull request against this repo.
+- Create clone this repository locally. Then push it to your GitHub account and continue working from there. Once you have finished, please send us the URL of the repository you created.
 
 ### Some things to consider:
 - We like tested code

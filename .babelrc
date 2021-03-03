@@ -5,7 +5,10 @@
       {
         "targets": {
           "browsers": [
-            "last 2 versions and > .2%, not dead, not ie 11"
+            "last 2 versions",
+            "> .5%",
+            "not dead",
+            "not ie 11"
           ]
         }
       }

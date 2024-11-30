@@ -1,7 +1,12 @@
+/* Schiphol colours */
+@import "./colors.css";
+
+/* Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  @import "./colors.css";
+/* Custom styles */
+body {
+  background-color: var(--light-blue);
 }

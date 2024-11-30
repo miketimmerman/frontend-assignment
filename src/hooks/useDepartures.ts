@@ -7,7 +7,9 @@ import { Flight } from "@/types/flight";
 export const useDepartures = () => {
   const [search, setSearch] = useState("");
   const [flights, setFlights] = useState<Flight[]>([]);
-  const [state, setState] = useState<"loading" | "idle" | "notFound">("idle");
+  const [state, setState] = useState<
+    "loading" | "idle" | "success" | "notFound"
+  >("idle");
   const [debouncedSearch, setDebouncedSearch] = useState(search);
 
   useEffect(() => {
@@ -24,12 +26,13 @@ export const useDepartures = () => {
       getFlights(debouncedSearch).then((data) => {
         // set flights data
         setFlights(data.flights);
-
-        setState(data.flights.length > 0 ? "idle" : "notFound");
+        // set state based on if there are flights or not
+        setState(data.flights.length > 0 ? "success" : "notFound");
       });
     } else {
       // reset flights data
       setFlights([]);
+      // reset state
       setState("idle");
     }
   }, [debouncedSearch]);

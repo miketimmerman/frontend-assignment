@@ -1,5 +1,7 @@
+import Departures from "@/components/Departures";
+
 const App = () => {
-  return <h1 className="text-2xl font-bold">Schiphol frontend assingment</h1>;
+  return <Departures />;
 };
 
 export default App;

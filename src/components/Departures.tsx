@@ -3,7 +3,7 @@ import Input from "./ui/Input";
 
 const Departures = () => {
   // TODO add debounce
-  const { search, flights, setSearch } = useDepartures();
+  const { search, state, flights, setSearch } = useDepartures();
 
   return (
     <div className="container mx-auto px-4">
@@ -11,8 +11,10 @@ const Departures = () => {
         Departures
       </h1>
       <Input value={search} onChange={(e) => setSearch(e.target.value)} />
-      {/* TODO add not found message */}
-      <pre>{JSON.stringify(flights, null, 2)}</pre>
+
+      {state === "loading" && <p>Informatie wordt opgehaald...</p>}
+      {state === "notFound" && <p>Geen resultaten gevonden</p>}
+      {state === "idle" && <pre>{JSON.stringify(flights, null, 2)}</pre>}
     </div>
   );
 };

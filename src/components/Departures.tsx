@@ -10,7 +10,11 @@ const Departures = () => {
       <h1 className="text-5xl font-bold text-schiphol-blue my-10 text-center">
         Departures
       </h1>
-      <Input value={search} onChange={(e) => setSearch(e.target.value)} />
+      <Input
+        placeholder="Bijvoorbeeld Amsterdam"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
 
       {state === "loading" && <p>Informatie wordt opgehaald...</p>}
       {state === "notFound" && <p>Geen resultaten gevonden</p>}

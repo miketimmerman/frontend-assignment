@@ -13,8 +13,10 @@ export const getFlights = async (
     flight.airport.toLowerCase().includes(search.toLowerCase())
   );
 
-  // limit the number of flights
-  data.flights = data.flights.slice(0, limit);
+  if (data.flights.length > limit) {
+    // limit the number of flights
+    data.flights = data.flights.slice(0, limit);
+  }
 
   return data;
 };

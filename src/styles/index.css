@@ -9,4 +9,5 @@
 /* Custom styles */
 body {
   background-color: var(--light-blue);
+  color: var(--schiphol-blue);
 }

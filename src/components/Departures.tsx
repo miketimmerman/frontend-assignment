@@ -2,7 +2,6 @@ import { useDepartures } from "@/hooks/useDepartures";
 import Input from "./ui/Input";
 
 const Departures = () => {
-  // TODO add debounce
   const { search, state, flights, setSearch } = useDepartures();
 
   return (
@@ -15,8 +14,8 @@ const Departures = () => {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-
-      {state === "loading" && <p>Informatie wordt opgehaald...</p>}
+      {/* TODO is loading state needed? */}
+      {/* {state === "loading" && <p>Informatie wordt opgehaald...</p>} */}
       {state === "notFound" && <p>Geen resultaten gevonden</p>}
       {state === "idle" && <pre>{JSON.stringify(flights, null, 2)}</pre>}
     </div>
